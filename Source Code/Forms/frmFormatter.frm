@@ -1,10 +1,10 @@
 VERSION 5.00
 Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} frmFormatter 
    Caption         =   "Formula Formatter"
-   ClientHeight    =   8715.001
-   ClientLeft      =   48
-   ClientTop       =   432
-   ClientWidth     =   6708
+   ClientHeight    =   8715
+   ClientLeft      =   45
+   ClientTop       =   435
+   ClientWidth     =   6705
    OleObjectBlob   =   "frmFormatter.frx":0000
    StartUpPosition =   1  'CenterOwner
 End
@@ -75,12 +75,12 @@ Private Sub Status(Optional ByVal str As String = "")
 End Sub
 
 Private Sub UserForm_Activate()
-    Const WS_THICKFRAME = &H40000, GWL_STYLE = (-16)
-    Dim lngHWnd As Long, lngStyle As Long, lngRet As Long
-
-    lngHWnd = FindWindow("ThunderDFrame", Me.Caption)
-    lngStyle = GetWindowLong(lngHWnd, GWL_STYLE)
-    lngRet = SetWindowLong(lngHWnd, GWL_STYLE, lngStyle Or WS_THICKFRAME)
+'    Const WS_THICKFRAME = &H40000, GWL_STYLE = (-16)
+'    Dim lngHWnd As Long, lngStyle As Long, lngRet As Long
+'
+'    lngHWnd = FindWindow("ThunderDFrame", Me.Caption)
+'    lngStyle = GetWindowLong(lngHWnd, GWL_STYLE)
+'    lngRet = SetWindowLong(lngHWnd, GWL_STYLE, lngStyle Or WS_THICKFRAME)
 
     txtFormula.SetFocus
 End Sub

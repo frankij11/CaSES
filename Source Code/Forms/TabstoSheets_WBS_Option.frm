@@ -2,9 +2,9 @@ VERSION 5.00
 Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} TabstoSheets_WBS_Option 
    Caption         =   "Select WBS Format"
    ClientHeight    =   2790
-   ClientLeft      =   48
-   ClientTop       =   372
-   ClientWidth     =   4872
+   ClientLeft      =   45
+   ClientTop       =   375
+   ClientWidth     =   4875
    OleObjectBlob   =   "TabstoSheets_WBS_Option.frx":0000
    StartUpPosition =   1  'CenterOwner
 End

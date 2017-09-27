@@ -2,9 +2,9 @@ VERSION 5.00
 Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} UF_Other_WBS_Template 
    Caption         =   "Additional WBS Templates:"
    ClientHeight    =   1050
-   ClientLeft      =   48
-   ClientTop       =   372
-   ClientWidth     =   6852
+   ClientLeft      =   45
+   ClientTop       =   375
+   ClientWidth     =   6855
    OleObjectBlob   =   "UF_Other_WBS_Template.frx":0000
    StartUpPosition =   1  'CenterOwner
 End

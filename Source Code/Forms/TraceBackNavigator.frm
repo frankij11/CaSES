@@ -1,10 +1,10 @@
 VERSION 5.00
 Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} TraceBackNavigator 
    Caption         =   "Traceback Navigator"
-   ClientHeight    =   8685.001
-   ClientLeft      =   48
-   ClientTop       =   372
-   ClientWidth     =   11208
+   ClientHeight    =   8685
+   ClientLeft      =   45
+   ClientTop       =   375
+   ClientWidth     =   11205
    OleObjectBlob   =   "TraceBackNavigator.frx":0000
    ShowModal       =   0   'False
    StartUpPosition =   1  'CenterOwner
@@ -147,7 +147,7 @@ End Sub
 
 Private Sub UserForm_Activate()
     Dim i
-    MakeFormResizable
+    'MakeFormResizable
     'Me.TreeView1.LineStyle = tvwRootLines
     'Tre
     ListBox5.Clear
