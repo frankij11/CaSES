@@ -1,6 +1,4 @@
 Attribute VB_Name = "a_AboutAddin"
-
-
 'MIT License
 '
 'Copyright (c) 2017 CaSES
