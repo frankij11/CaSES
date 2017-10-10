@@ -133,6 +133,9 @@ Sub CreateTOC(Optional ByVal IncludeHiddenSheets As Boolean = False, _
             If AddHomeLinkOnSheets Then
                 If TOCBook.Sheets(SheetName).Type = xlWorksheet Then
                     If TOCBook.Sheets(SheetName).ProtectContents = False Then
+                        If TOCBook.Sheets(SheetName).Range(HomeCell).Value <> "" Or TOCBook.Sheets(SheetName).Range(HomeCell).Value <> "TOC" Then
+                            TOCBook.Sheets(SheetName).Range(HomeCell).EntireRow.Insert
+                        End If
                         TOCBook.Sheets(SheetName).Range(HomeCell).Value = "TOC"
                         TOCBook.Sheets(SheetName).Range(HomeCell).Hyperlinks.Add Anchor:=TOCBook.Sheets(SheetName).Range("A1"), Address:="#'" & TOCName & "'!A1", TextToDisplay:=TOCName
                     End If
