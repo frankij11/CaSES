@@ -140,7 +140,7 @@ Sub Toolbar_ON()
           
         With ModelPropDropDown.Controls.Add(Type:=msoControlButton)
             .Caption = "Create Table of Contents (TOC)"
-            .OnAction = ThisWorkbook.Name & "!TEST_CreateTOC1"
+            .OnAction = ThisWorkbook.Name & "!TEST_CreateTOC3"
             .FaceId = 209
         End With
         
