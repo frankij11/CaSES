@@ -139,13 +139,6 @@ Private Sub UserForm_Activate()
         .ScrollHeight = .InsideHeight * 2
         .ScrollWidth = .InsideWidth * 1.5
     End With
-    'Dim bytOpacity As Byte
-bytOpacity = 255 ' variable keeping opacity setting
-hwnd = FindWindow("ThunderDFrame", Me.Caption)
-Call SetWindowLong(Me.hwnd, GWL_EXSTYLE, GetWindowLong(Me.hwnd, GWL_EXSTYLE) Or WS_EX_LAYERED)
-Call SetLayeredWindowAttributes(Me.hwnd, 0, bytOpacity, LWA_ALPHA)
-
-    
 End Sub
 
 Private Sub UserForm_Click()
