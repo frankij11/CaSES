@@ -133,7 +133,7 @@ Sub CreateTOC(Optional ByVal IncludeHiddenSheets As Boolean = False, _
             If AddHomeLinkOnSheets Then
                 If TOCBook.Sheets(SheetName).Type = xlWorksheet Then
                     If TOCBook.Sheets(SheetName).ProtectContents = False Then
-                        If TOCBook.Sheets(SheetName).Range(HomeCell).Value <> "" Or TOCBook.Sheets(SheetName).Range(HomeCell).Value <> "TOC" Then
+                        If TOCBook.Sheets(SheetName).Range(HomeCell).Value <> "" And TOCBook.Sheets(SheetName).Range(HomeCell).Value <> "TOC" Then
                             TOCBook.Sheets(SheetName).Range(HomeCell).EntireRow.Insert
                         End If
                         TOCBook.Sheets(SheetName).Range(HomeCell).Value = "TOC"
