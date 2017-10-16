@@ -275,18 +275,12 @@ Sub Toolbar_ON()
             End With
             
             With WBSDropDown.Controls.Add(Type:=msoControlButton)
-                .Caption = "Add 881C WBS"
+                .Caption = "Add WBS to Worksheet"
                 .OnAction = ThisWorkbook.Name & "!WBS_MILSTD881C"
                 .FaceId = 169
-                .TooltipText = "This module will copy MIL-STD 881C WBS to worksheet"
+                .TooltipText = "This module will copy a specified WBS to worksheet"
             End With
             
-           With WBSDropDown.Controls.Add(Type:=msoControlButton)
-                .Caption = "Add Custom WBS"
-                .OnAction = ThisWorkbook.Name & "!Other_WBS_Templates"
-                .FaceId = 169
-                .TooltipText = "This module will copy WBS templates to worksheet"
-            End With
             
             With WBSDropDown.Controls.Add(Type:=msoControlButton)
                 .Caption = "Create WBS Tabs"
