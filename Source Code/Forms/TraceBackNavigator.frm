@@ -17,38 +17,13 @@ Attribute VB_Exposed = False
 Option Explicit
 
 
-Dim bytOpacity As Byte
-Private Declare Function FindWindow Lib "user32" Alias "FindWindowA" _
-(ByVal lpClassName As String, ByVal lpWindowName As String) As Long
-Private Declare Function GetWindowLong Lib "user32" Alias "GetWindowLongA" _
-(ByVal hwnd As Long, ByVal nIndex As Long) As Long
-Private Declare Function SetWindowLong Lib "user32" Alias "SetWindowLongA" _
-(ByVal hwnd As Long, ByVal nIndex As Long, ByVal dwNewLong As Long) As Long
-Private Declare Function SetLayeredWindowAttributes Lib "user32" _
-(ByVal hwnd As Long, ByVal crey As Byte, ByVal bAlpha As Byte, ByVal dwFlags As Long) As Long
-
-Private Const GWL_EXSTYLE = (-20)
-Private Const WS_EX_LAYERED = &H80000
-Private Const LWA_ALPHA = &H2&
-
-Public hwnd As Long
-
-
-
-
-
 Private Sub Userform1_initialize()
 TraceBackNavigator.Show
 
 End Sub
 
 Private Sub CheckBox1_Click()
-If bytOpacity = 25 Then bytOpacity = 255 Else bytOpacity = 25
-'bytOpacity = 25 ' variable keeping opacity setting
-hwnd = FindWindow("ThunderDFrame", Me.Caption)
-Call SetWindowLong(Me.hwnd, GWL_EXSTYLE, GetWindowLong(Me.hwnd, GWL_EXSTYLE) Or WS_EX_LAYERED)
-Call SetLayeredWindowAttributes(Me.hwnd, 0, bytOpacity, LWA_ALPHA)
-
+'''Need to add logic back in minimze screen
 End Sub
 
 Private Sub CommandButton1_Click()
@@ -269,40 +244,3 @@ ERR:
     ReDim Preserve tempp(1 To 1, 1 To 1)
 ErrorHand:
 End Sub
-
-
-
-Private Sub Tre()
-Dim ws As Worksheet
-     Dim rngFormula As Range
-     Dim rngFormulas As Range
-        
-     With Me.TreeView1.Nodes
-          'Clear TreeView control
-          .Clear
-          
-          For Each ws In ActiveWorkbook.Worksheets
-               'Add worksheet nodes
-               .Add Key:=ws.Name, text:=ws.Name
-
-               'Check if any formulas in worksheet
-               On Error Resume Next
-               Set rngFormulas = ws.Cells.SpecialCells(xlCellTypeFormulas)
-               On Error GoTo 0
-
-               'Add formula cells
-               If Not rngFormulas Is Nothing Then
-                    For Each rngFormula In rngFormulas
-                         .Add relative:=ws.Name, _
-                              relationship:=tvwChild, _
-                              Key:=ws.Name & "," & rngFormula.Address, _
-                              text:=rngFormula.Address
-                    Next rngFormula
-               End If
-
-               'Release the range for next iteration
-               Set rngFormulas = Nothing
-          Next ws
-     End With
-End Sub
-
