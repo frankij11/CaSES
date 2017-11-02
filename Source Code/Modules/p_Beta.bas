@@ -66,4 +66,7 @@ For currentFY = Int(StartDate) To Int(EndDate)
     BetaPhasing = results
 'If a > 1 Or a < 0 Or b < 0 Or a + b > 1 Then BetaPhasing = "Choose proper Alpha and Beta"
 End Function
-
+                        Public Function CaSES_Phasing_Beta(StartDate, Duration, Cost, a, b, FY)
+                                    CaSES_Phasing_Beta = BetaPhasing(StartDate, Duration, Cost, a,b,FY)
+                        End Function
+                    
