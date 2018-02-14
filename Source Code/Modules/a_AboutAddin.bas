@@ -36,6 +36,9 @@ MsgBox Prompt:="Originally Created by:" _
                 & vbNewLine & "Nicholas Lanham and Kevin Joy" _
                 & vbNewLine & vbNewLine & "Major Contributors:" _
                 & vbNewLine & "Duncan Thomas, Naval Center for Cost Analysis" _
+                & vbNewLine & "John Georges, National Security Agency" _
+                & vbNewLine & "Donald Clarke, Naval Center for Cost Analysis" _              
+                & vbNewLine & "Anne Hawpe, supporting the Naval Center for Cost Analysis" _
                 & vbNewLine & vbNewLine & "This tool was developed using an open source concept and is available to all users at no cost." _
                 & vbNewLine & vbNewLine & "This version was last updated on: " & vbNewLine & CT_Date & vbNewLine & CT_version _
                 & vbNewLine & vbNewLine & "Add-In location: " & ThisWorkbook.Path, _
