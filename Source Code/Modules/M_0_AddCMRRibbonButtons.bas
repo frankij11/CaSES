@@ -295,7 +295,14 @@ Sub Toolbar_ON()
             .OnAction = ThisWorkbook.Name & "!PivotFieldsToSum"
             .FaceId = 95
         End With
- 
+        
+        With EstimateDropDown.Controls.Add(Type:=msoControlButton)
+            .Caption = "Flat File Creator"
+            .TooltipText = "Automatically creates a flat file output for selected tabs and data content"
+            .OnAction = ThisWorkbook.Name & "!Flat_File_Creator"
+            .FaceId = 142
+        End With 
+
 '**********************************************************************************************************************************
 ' This portion of code establishes the third CommandBar and support CommandButtons
 '    On Error Resume Next: Set bar3 = Application.CommandBars(cCommandBar3): On Error GoTo 0
