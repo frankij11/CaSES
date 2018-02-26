@@ -52,7 +52,7 @@ Sub ListFormulas()
 '   Adjust column widths
     FormulaSheet.Columns("A:C").AutoFit
     Application.StatusBar = False
-    MsgBox ("Finished in " & Time - start)
+    'MsgBox ("Finished in " & Time - start)
 End Sub
 
 
