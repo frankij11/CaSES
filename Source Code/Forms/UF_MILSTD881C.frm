@@ -1,6 +1,6 @@
 VERSION 5.00
 Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} UF_MILSTD881C 
-   Caption         =   "MIL-STD-881C WBS Selector Tool:"
+   Caption         =   "WBS Selector Tool:"
    ClientHeight    =   1050
    ClientLeft      =   45
    ClientTop       =   375
@@ -13,6 +13,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+
 
 Private Sub CB_MILSTD881C_Click()
     Dim location As Range
