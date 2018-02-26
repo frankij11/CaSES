@@ -248,7 +248,7 @@ Sub Toolbar_ON()
         '' Add dropdown within first comstom dropdown
         Dim TemplateDropDown As CommandBarControl
         Set TemplateDropDown = EstimateDropDown.Controls.Add(Type:=msoControlPopup)
-            TemplateDropDown.Caption = "Add Caclulation Template"
+            TemplateDropDown.Caption = "Add Calculation Template"
             
             With TemplateDropDown.Controls.Add(Type:=msoControlButton)
                 .Caption = "Generic Template"
