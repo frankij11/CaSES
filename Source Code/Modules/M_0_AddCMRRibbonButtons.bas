@@ -45,13 +45,27 @@ Sub Toolbar_ON()
  
     bln = Application.ScreenUpdating
     Application.ScreenUpdating = False
-    With Bar.Controls.Add(Type:=msoControlButton)
+    Dim AboutDropDown As CommandBarControl
+    Set AboutDropDown = Bar.Controls.Add(Type:=msoControlPopup)
+    AboutDropDown.Caption = "About CaSES"
+    
+    With AboutDropDown.Controls.Add(Type:=msoControlButton)
         .FaceId = 30
         .Caption = "About CaSES"
         .Style = 3
         .OnAction = ThisWorkbook.Name & "!About_CT"
         .TooltipText = "About CaSES Add-in"
     End With
+     
+    With AboutDropDown.Controls.Add(Type:=msoControlButton)
+        '.FaceId = 30
+        .Caption = "Unload CaSES"
+        .Style = 3
+        .OnAction = ThisWorkbook.Name & "!UnloadCaSES"
+        .TooltipText = "Close CaSES Add-in"
+    End With
+     
+     
      
      
 ''''''''''''''''''''''''''''''''''''''
@@ -301,7 +315,7 @@ Sub Toolbar_ON()
             .TooltipText = "Automatically creates a flat file output for selected tabs and data content"
             .OnAction = ThisWorkbook.Name & "!Flat_File_Creator"
             .FaceId = 142
-        End With 
+        End With
 
 '**********************************************************************************************************************************
 ' This portion of code establishes the third CommandBar and support CommandButtons
